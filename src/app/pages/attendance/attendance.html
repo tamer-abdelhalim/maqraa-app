@@ -1,0 +1,11 @@
+<div class="attendance-page">
+  <h2>Attendance</h2>
+  <div class="attendance-list">
+    <!-- Example attendance list -->
+    <div class="attendance-item" *ngFor="let student of students">
+      <span class="student-name">{{ student.name }}</span>
+      <button mat-raised-button color="primary" (click)="markPresent(student)">Present</button>
+      <button mat-raised-button color="warn" (click)="markAbsent(student)">Absent</button>
+    </div>
+  </div>
+</div>

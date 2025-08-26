@@ -1,0 +1,17 @@
+<div class="login-bg">
+	<div class="login-container">
+		<img src="/assets/maqra2a-logo.svg" alt="Maqraa Logo" class="login-logo" />
+		<form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+			<mat-form-field appearance="fill" class="login-field">
+				<mat-label>Username</mat-label>
+				<input matInput type="text" formControlName="username" required />
+			</mat-form-field>
+			<mat-form-field appearance="fill" class="login-field">
+				<mat-label>Password</mat-label>
+				<input matInput type="password" formControlName="password" required />
+			</mat-form-field>
+			<button mat-raised-button color="primary" class="login-btn" type="submit">Login</button>
+			<div *ngIf="errorMsg" class="login-error">{{ errorMsg }}</div>
+		</form>
+	</div>
+</div>
